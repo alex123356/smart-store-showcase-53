@@ -68,11 +68,26 @@ function Home() {
           </div>
           <div className="hero-visual relative mx-auto w-full max-w-[500px] md:max-w-none">
             <div className="absolute inset-[8%] rounded-full bg-secondary/60 blur-3xl" aria-hidden="true" />
-            <svg className="tech-bg pointer-events-none absolute left-1/2 top-1/2 z-0 h-[118%] w-[118%] -translate-x-1/2 -translate-y-1/2 text-primary" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-              <g className="tech-orbit-a"><circle cx="200" cy="200" r="185" stroke="currentColor" strokeOpacity="0.12" strokeDasharray="2 10" /><circle cx="200" cy="15" r="4" fill="currentColor" fillOpacity="0.35" /></g>
-              <g className="tech-orbit-b"><circle cx="200" cy="200" r="150" stroke="currentColor" strokeOpacity="0.1" /><rect x="345" y="195" width="10" height="10" rx="2" fill="var(--secondary)" stroke="currentColor" strokeOpacity="0.3" /></g>
-              <g className="tech-orbit-c tech-mobile-hide"><ellipse cx="200" cy="200" rx="195" ry="70" stroke="currentColor" strokeOpacity="0.08" /></g>
-              <g className="tech-pulse"><circle cx="200" cy="200" r="120" fill="var(--secondary)" fillOpacity="0.35" /></g>
+            <svg className="tech-bg pointer-events-none absolute left-1/2 top-1/2 z-20 h-[106%] w-[106%] -translate-x-1/2 -translate-y-1/2 text-primary" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="tech-surface" x1="54" y1="38" x2="126" y2="128" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="white" stopOpacity="0.96" />
+                  <stop offset="0.58" stopColor="#DBEAFE" stopOpacity="0.94" />
+                  <stop offset="1" stopColor="#E2E8F0" stopOpacity="0.9" />
+                </linearGradient>
+                <filter id="tech-shadow" x="20" y="10" width="145" height="150" filterUnits="userSpaceOnUse">
+                  <feDropShadow dx="0" dy="7" stdDeviation="7" floodColor="#2563EB" floodOpacity="0.2" />
+                </filter>
+              </defs>
+              <g className="tech-orbit-a"><circle cx="200" cy="200" r="188" stroke="currentColor" strokeOpacity="0.24" strokeWidth="1.5" strokeDasharray="3 11" /><circle cx="200" cy="12" r="5" fill="#DBEAFE" stroke="currentColor" strokeOpacity="0.75" /></g>
+              <g className="tech-orbit-b"><ellipse cx="200" cy="200" rx="184" ry="112" stroke="white" strokeOpacity="0.55" strokeWidth="2" /><rect x="373" y="194" width="12" height="12" rx="3" fill="#DBEAFE" stroke="currentColor" strokeOpacity="0.8" /></g>
+              <g className="tech-object" filter="url(#tech-shadow)">
+                <path d="M62 58L88 43L116 55L131 81L119 111L91 126L63 113L48 87Z" fill="url(#tech-surface)" stroke="#2563EB" strokeOpacity="0.72" strokeWidth="2" />
+                <rect x="68" y="65" width="43" height="39" rx="10" fill="white" fillOpacity="0.72" stroke="#2563EB" strokeOpacity="0.34" />
+                <path d="M76 86H103M90 72V99" stroke="#2563EB" strokeOpacity="0.65" strokeWidth="2.5" strokeLinecap="round" />
+                <circle cx="116" cy="65" r="4" fill="#2563EB" />
+                <circle cx="61" cy="106" r="3" fill="#DBEAFE" stroke="#2563EB" strokeOpacity="0.65" />
+              </g>
             </svg>
             <img src={site.heroImage} alt="يد تحكم ألعاب من كماليات الحاسب" width={1024} height={1024} fetchPriority="high" className="hero-float relative z-10 aspect-square w-full rounded-[8px] object-cover" />
           </div>
