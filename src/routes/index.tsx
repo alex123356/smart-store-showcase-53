@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowLeft, ArrowUpLeft, Headphones, Keyboard, MapPin, Menu, Monitor, Mouse, Phone, X, Gamepad2, Facebook, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowUpLeft, Keyboard, MapPin, Menu, Monitor, Mouse, Phone, X, Gamepad2, Facebook, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { contactLinks, site } from "@/lib/site-config";
 
