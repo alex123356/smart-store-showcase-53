@@ -68,6 +68,12 @@ function Home() {
           </div>
           <div className="hero-visual relative mx-auto w-full max-w-[500px] md:max-w-none">
             <div className="absolute inset-[8%] rounded-full bg-secondary/60 blur-3xl" aria-hidden="true" />
+            <svg className="tech-bg pointer-events-none absolute left-1/2 top-1/2 z-0 h-[118%] w-[118%] -translate-x-1/2 -translate-y-1/2 text-primary" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+              <g className="tech-orbit-a"><circle cx="200" cy="200" r="185" stroke="currentColor" strokeOpacity="0.12" strokeDasharray="2 10" /><circle cx="200" cy="15" r="4" fill="currentColor" fillOpacity="0.35" /></g>
+              <g className="tech-orbit-b"><circle cx="200" cy="200" r="150" stroke="currentColor" strokeOpacity="0.1" /><rect x="345" y="195" width="10" height="10" rx="2" fill="var(--secondary)" stroke="currentColor" strokeOpacity="0.3" /></g>
+              <g className="tech-orbit-c tech-mobile-hide"><ellipse cx="200" cy="200" rx="195" ry="70" stroke="currentColor" strokeOpacity="0.08" /></g>
+              <g className="tech-pulse"><circle cx="200" cy="200" r="120" fill="var(--secondary)" fillOpacity="0.35" /></g>
+            </svg>
             <img src={site.heroImage} alt="يد تحكم ألعاب من كماليات الحاسب" width={1024} height={1024} fetchPriority="high" className="hero-float relative z-10 aspect-square w-full rounded-[8px] object-cover" />
           </div>
         </div>
