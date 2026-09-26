@@ -144,6 +144,14 @@
 .hero-copy { animation: rise-in 650ms ease-out both; }
 .hero-visual { animation: rise-in 750ms 100ms ease-out both; }
 .hero-float { animation: float-soft 5s ease-in-out infinite; }
+@keyframes tech-spin { to { transform: rotate(360deg); } }
+@keyframes tech-breathe { 0%, 100% { transform: scale(0.94); opacity: 0.6; } 50% { transform: scale(1.04); opacity: 1; } }
+.tech-bg g { transform-origin: 200px 200px; transform-box: view-box; will-change: transform; }
+.tech-orbit-a { animation: tech-spin 60s linear infinite; }
+.tech-orbit-b { animation: tech-spin 45s linear infinite reverse; }
+.tech-orbit-c { animation: tech-spin 80s linear infinite; }
+.tech-pulse { animation: tech-breathe 9s ease-in-out infinite; }
+@media (max-width: 767px) { .tech-mobile-hide { display: none; } .tech-bg { width: 100%; height: 100%; } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
